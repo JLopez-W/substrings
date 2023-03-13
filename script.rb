@@ -1,6 +1,5 @@
 dictionary = ["crummy", "crumb", "crumble", "rum", "my", "also", "so", "son", "oval", "ovaltine", "malt", "a", 
   "commercial", "commerce", "me", "of", "off", "offer", "bitch", "bit", "itch", "it", "i"]
-
 string = "Ovaltine? A crummy commercial? Son of a bitch!"
 
 def substrings(string, dictionary)
@@ -28,4 +27,3 @@ end
 
 puts "'#{string}'\ninlcudes the following substrings:\n\n"
 p substrings(string, dictionary)
-
