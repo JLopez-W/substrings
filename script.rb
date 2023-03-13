@@ -1,23 +1,31 @@
-dictionary = ["crummy", "crumb", "crumble", "rum", "my", "also", "so", "son", "oval", "Ovaltine", "malt", "a", 
-  "commercial", "commerce", "me", "of", "off", "offer", "bit", "itch", "bitch", "it", "i"]
+dictionary = ["crummy", "crumb", "crumble", "rum", "my", "also", "so", "son", "oval", "ovaltine", "malt", "a", 
+  "commercial", "commerce", "me", "of", "off", "offer", "bitch", "bit", "itch", "it", "i"]
 
 string = "Ovaltine? A crummy commercial? Son of a bitch!"
 
-substring_totals = Hash.new
-
 def substrings(string, dictionary)
-  string_arr = string.split(" ") 
-
+  string_arr = string.downcase.split(" ")
+  temp_arr = []
   dictionary.each do |item|
     item
    string_arr.each do |word|
     if word.include?(item) 
-  p "#{word} includes #{item}"
+      temp_arr.push(item)
    end
   end
+end
+  temp_arr
+  substring_totals = Hash.new
+  temp_arr.each do |item| 
+    if substring_totals.has_key?(item) == false
+      substring_totals[item] = 1
+    else
+     substring_totals[item] += 1
+    end
   end
+  substring_totals
 end
 
-
+p "'#{string}' inlcudes the following substrings:"
 p substrings(string, dictionary)
 
