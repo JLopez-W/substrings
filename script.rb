@@ -25,5 +25,5 @@ end
   substring_totals
 end
 
-puts "'#{string}'\ninlcudes the following substrings:\n\n"
+puts "\n'#{string}'\n\ninlcudes the following substrings:\n\n"
 p substrings(string, dictionary)
